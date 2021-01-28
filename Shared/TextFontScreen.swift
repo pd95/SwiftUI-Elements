@@ -13,7 +13,7 @@ struct TextFontScreen: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     GroupBox(label: Label("Text styles/Fonts", systemImage: "textformat")) {
                         HStack(alignment: .top) {
@@ -79,6 +79,8 @@ struct TextFontScreen: View {
                                     .fontWeight(.ultraLight)
                             }
                             .fixedSize()
+
+                            Spacer()
                         }
                     }
                 }
@@ -90,7 +92,7 @@ struct TextFontScreen: View {
 
 struct TextScreen_Previews: PreviewProvider {
     static var previews: some View {
-        BasicControlsScreen()
+        TextFontScreen()
             .previewLayout(.sizeThatFits)
     }
 }
