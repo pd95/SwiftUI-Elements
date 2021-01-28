@@ -38,7 +38,7 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
 }
 
 class ViewModel: ObservableObject {
-    @Published var selectedScreen: Screen? = .fontStyles
+    @Published var selectedScreen: Screen? = .basicControls
 
     func gotoScreen(_ screen: Screen?) {
         #if os(iOS)

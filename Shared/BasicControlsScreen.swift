@@ -12,20 +12,26 @@ struct BasicControlsScreen: View {
     @State private var toggleValue = true
     @State private var sliderValue = 15.0
     @State private var stepperValue = 5
-    @State private var pickerValue: Screen? = .welcome
+    @State private var pickerValue: Screen = .welcome
     @State private var dateValue = Date(timeIntervalSinceReferenceDate: 0)
     @State private var colorValue = Color.blue
 
     var body: some View {
         ScrollView(.vertical) {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     GroupBox(label: Label("Buttons & styles", systemImage: "square.grid.2x2")) {
                         buttonStyles
                     }
 
-                    GroupBox(label: Label("Controls & Pickers", systemImage: "square.grid.2x2")) {
+                    GroupBox(label: Label("Controls & Pickers", systemImage: "switch.2")) {
                         controlViews
+                    }
+                }
+                
+                HStack(alignment: .top) {
+                    GroupBox(label: Label("Picker styles", systemImage: "square.grid.2x2")) {
+                        pickerStyles
                     }
                 }
                 
@@ -40,6 +46,76 @@ struct BasicControlsScreen: View {
                 }
             }
             .padding()
+        }
+    }
+    
+    var pickerStyles: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .labelAlignment, spacing: 10) {
+                LabeledControl(title: "SegmentedPickerStyle:") {
+                    Picker("Screen", selection: $pickerValue) {
+                        ForEach(Screen.allCases[0...3], id: \.self) { screen in
+                            Text(screen.description)
+                        }
+                    }
+                    .frame(maxWidth: 500)
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
+                    .pickerStyle(SegmentedPickerStyle())
+                }
+
+                LabeledControl(title: "InlinePickerStyle:") {
+                    Picker("Screen", selection: $pickerValue) {
+                        ForEach(Screen.allCases[0...3], id: \.self) { screen in
+                            Text(screen.description)
+                        }
+                    }
+                    .frame(maxWidth: 200, alignment: .leading)
+                    .pickerStyle(InlinePickerStyle())
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
+                }
+
+                LabeledControl(title: "MenuPickerStyle:") {
+                    Picker("Screen", selection: $pickerValue) {
+                        ForEach(Screen.allCases[0...3], id: \.self) { screen in
+                            Text(screen.description)
+                        }
+                    }
+                    .frame(maxWidth: 200)
+                    .pickerStyle(MenuPickerStyle())
+                }
+
+                #if os(macOS)
+                LabeledControl(title: "RadioGroupPickerStyle:") {
+                    Picker("Screen", selection: $pickerValue) {
+                        ForEach(Screen.allCases[0...3], id: \.self) { screen in
+                            Text(screen.description)
+                        }
+                    }
+                    .frame(maxWidth: 200, alignment: .leading)
+                    .pickerStyle(RadioGroupPickerStyle())
+                }
+                #endif
+
+                #if os(iOS)
+                LabeledControl(title: "WheelPickerStyle:") {
+                    Picker("Screen", selection: $pickerValue) {
+                        ForEach(Screen.allCases[0...3], id: \.self) { screen in
+                            Text(screen.description)
+                        }
+                    }
+                    .frame(maxWidth: 200, alignment: .leading)
+                    .pickerStyle(WheelPickerStyle())
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
+                }
+                #endif
+            }
+            .labelsHidden()
         }
     }
     
@@ -203,6 +279,7 @@ struct BasicControlsScreen: View {
 struct BasicFormScreen_Previews: PreviewProvider {
     static var previews: some View {
         BasicControlsScreen()
+            .frame(width: 800, height: 800)
             .previewLayout(.sizeThatFits)
     }
 }
