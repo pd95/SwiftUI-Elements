@@ -28,7 +28,7 @@ struct LabeledTextField<ChosenStyle: TextFieldStyle>: View {
 
             TextField(placeholder, text: $text)
                 .textFieldStyle(style)
-                .frame(maxWidth: 200)
+                .frame(maxWidth: 150)
                 .alignmentGuide(.labelAlignment, computeValue: { dimension in
                     dimension[HorizontalAlignment.leading]
                 })

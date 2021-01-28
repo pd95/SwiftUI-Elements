@@ -47,6 +47,7 @@ struct BasicControlsScreen: View {
             }
             .padding()
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     var pickerStyles: some View {
@@ -71,7 +72,7 @@ struct BasicControlsScreen: View {
                             Text(screen.description)
                         }
                     }
-                    .frame(maxWidth: 200, alignment: .leading)
+                    .frame(maxWidth: 200, maxHeight: 180, alignment: .leading)
                     .pickerStyle(InlinePickerStyle())
                     .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
                         dimension[VerticalAlignment.center] + 5
@@ -107,7 +108,7 @@ struct BasicControlsScreen: View {
                             Text(screen.description)
                         }
                     }
-                    .frame(maxWidth: 200, alignment: .leading)
+                    .frame(maxWidth: 200, maxHeight: 180, alignment: .leading)
                     .pickerStyle(WheelPickerStyle())
                     .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
                         dimension[VerticalAlignment.center] + 5
@@ -279,7 +280,7 @@ struct BasicControlsScreen: View {
 struct BasicFormScreen_Previews: PreviewProvider {
     static var previews: some View {
         BasicControlsScreen()
-            .frame(width: 800, height: 800)
+            .frame(minWidth: 710, minHeight: 1600)
             .previewLayout(.sizeThatFits)
     }
 }

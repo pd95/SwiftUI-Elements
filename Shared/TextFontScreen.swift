@@ -79,14 +79,13 @@ struct TextFontScreen: View {
                                     .fontWeight(.ultraLight)
                             }
                             .fixedSize()
-
-                            Spacer()
                         }
                     }
                 }
             }
             .padding()
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
