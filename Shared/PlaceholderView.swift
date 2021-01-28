@@ -14,7 +14,7 @@ struct PlaceholderView: View {
 
     var body: some View {
         VStack {
-            Text("An App exploring the available SwiftUI elements")
+            Text("An app to explore SwiftUI elements")
                 .font(.largeTitle)
                 .padding()
 
@@ -37,6 +37,6 @@ struct PlaceholderView: View {
 
 struct NavigationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceholderView(screen: .basicForm)
+        PlaceholderView(screen: .basicControls)
     }
 }

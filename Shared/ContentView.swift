@@ -12,18 +12,29 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            NavigationSidebar(selection: $model.selectedScreen) { screen in
-                switch screen {
-                default:
-                    PlaceholderView(screen: screen)
-                }
-            }
+            NavigationSidebar(selection: $model.selectedScreen, content: mainView(for: ))
 
             #if os(macOS)
-            PlaceholderView(screen: model.selectedScreen)
+            if let screen = model.selectedScreen {
+                mainView(for: screen)
+            }
             #endif
         }
         .environmentObject(model)
+    }
+    
+    func mainView(for screen: Screen) -> some View {
+        Group {
+            switch screen {
+            case .fontStyles:
+                TextFontScreen()
+            case .basicControls:
+                BasicControlsScreen()
+            default:
+                PlaceholderView(screen: screen)
+            }
+        }
+        .navigationTitle(screen.description)
     }
 }
 

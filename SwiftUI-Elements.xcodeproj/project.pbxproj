@@ -19,6 +19,20 @@
 		1785BDFC25C2AA9300CEC3EF /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1785BDFA25C2AA9300CEC3EF /* PlaceholderView.swift */; };
 		1785BE0225C2AB8300CEC3EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1785BE0125C2AB8300CEC3EF /* ViewModel.swift */; };
 		1785BE0325C2AB8300CEC3EF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1785BE0125C2AB8300CEC3EF /* ViewModel.swift */; };
+		17C5614825C2AEE60053CFA7 /* BasicControlsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5614125C2AE9A0053CFA7 /* BasicControlsScreen.swift */; };
+		17C5616B25C2D11F0053CFA7 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5616A25C2D11F0053CFA7 /* FormLabel.swift */; };
+		17C5616C25C2D11F0053CFA7 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5616A25C2D11F0053CFA7 /* FormLabel.swift */; };
+		17C5617025C2D1860053CFA7 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5616F25C2D1860053CFA7 /* LabeledButton.swift */; };
+		17C5617125C2D1860053CFA7 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5616F25C2D1860053CFA7 /* LabeledButton.swift */; };
+		17C5617525C2D23E0053CFA7 /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5617425C2D23E0053CFA7 /* LabelAlignment.swift */; };
+		17C5617625C2D23E0053CFA7 /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5617425C2D23E0053CFA7 /* LabelAlignment.swift */; };
+		17C5617F25C2ECB80053CFA7 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5617E25C2ECB80053CFA7 /* LabeledTextField.swift */; };
+		17C5618025C2ECB80053CFA7 /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5617E25C2ECB80053CFA7 /* LabeledTextField.swift */; };
+		17C5618625C2F4410053CFA7 /* LabeledControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5618525C2F4410053CFA7 /* LabeledControl.swift */; };
+		17C5618725C2F4410053CFA7 /* LabeledControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5618525C2F4410053CFA7 /* LabeledControl.swift */; };
+		17C5618F25C2FF2A0053CFA7 /* TextFontScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5618E25C2FF2A0053CFA7 /* TextFontScreen.swift */; };
+		17C5619025C2FF2A0053CFA7 /* TextFontScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5618E25C2FF2A0053CFA7 /* TextFontScreen.swift */; };
+		17C5619525C300710053CFA7 /* BasicControlsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5614125C2AE9A0053CFA7 /* BasicControlsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +48,13 @@
 		1785BDFA25C2AA9300CEC3EF /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		1785BE0125C2AB8300CEC3EF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1785BE0625C2AC6200CEC3EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17C5614125C2AE9A0053CFA7 /* BasicControlsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicControlsScreen.swift; sourceTree = "<group>"; };
+		17C5616A25C2D11F0053CFA7 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
+		17C5616F25C2D1860053CFA7 /* LabeledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledButton.swift; sourceTree = "<group>"; };
+		17C5617425C2D23E0053CFA7 /* LabelAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAlignment.swift; sourceTree = "<group>"; };
+		17C5617E25C2ECB80053CFA7 /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
+		17C5618525C2F4410053CFA7 /* LabeledControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledControl.swift; sourceTree = "<group>"; };
+		17C5618E25C2FF2A0053CFA7 /* TextFontScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFontScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +92,9 @@
 				17633F6925C1CEF5003A1ACA /* SwiftUI_ElementsApp.swift */,
 				17633F6A25C1CEF5003A1ACA /* ContentView.swift */,
 				1785BE0125C2AB8300CEC3EF /* ViewModel.swift */,
+				17C5614125C2AE9A0053CFA7 /* BasicControlsScreen.swift */,
+				17C5618E25C2FF2A0053CFA7 /* TextFontScreen.swift */,
+				17C5617B25C2EB480053CFA7 /* Helper */,
 				1785BDFA25C2AA9300CEC3EF /* PlaceholderView.swift */,
 				1785BDF525C2AA7900CEC3EF /* NavigationSidebar.swift */,
 				17633F6B25C1CEF8003A1ACA /* Assets.xcassets */,
@@ -102,6 +126,18 @@
 				17633F7B25C1CEF8003A1ACA /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		17C5617B25C2EB480053CFA7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				17C5617425C2D23E0053CFA7 /* LabelAlignment.swift */,
+				17C5616A25C2D11F0053CFA7 /* FormLabel.swift */,
+				17C5618525C2F4410053CFA7 /* LabeledControl.swift */,
+				17C5616F25C2D1860053CFA7 /* LabeledButton.swift */,
+				17C5617E25C2ECB80053CFA7 /* LabeledTextField.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C5618625C2F4410053CFA7 /* LabeledControl.swift in Sources */,
+				17C5617525C2D23E0053CFA7 /* LabelAlignment.swift in Sources */,
+				17C5614825C2AEE60053CFA7 /* BasicControlsScreen.swift in Sources */,
 				1785BE0225C2AB8300CEC3EF /* ViewModel.swift in Sources */,
 				1785BDFB25C2AA9300CEC3EF /* PlaceholderView.swift in Sources */,
+				17C5617025C2D1860053CFA7 /* LabeledButton.swift in Sources */,
 				17633F7E25C1CEF8003A1ACA /* ContentView.swift in Sources */,
+				17C5616B25C2D11F0053CFA7 /* FormLabel.swift in Sources */,
+				17C5617F25C2ECB80053CFA7 /* LabeledTextField.swift in Sources */,
 				1785BDF625C2AA7900CEC3EF /* NavigationSidebar.swift in Sources */,
+				17C5618F25C2FF2A0053CFA7 /* TextFontScreen.swift in Sources */,
 				17633F7C25C1CEF8003A1ACA /* SwiftUI_ElementsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,10 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C5618725C2F4410053CFA7 /* LabeledControl.swift in Sources */,
+				17C5617625C2D23E0053CFA7 /* LabelAlignment.swift in Sources */,
 				1785BE0325C2AB8300CEC3EF /* ViewModel.swift in Sources */,
 				1785BDFC25C2AA9300CEC3EF /* PlaceholderView.swift in Sources */,
+				17C5617125C2D1860053CFA7 /* LabeledButton.swift in Sources */,
 				17633F7F25C1CEF8003A1ACA /* ContentView.swift in Sources */,
+				17C5619525C300710053CFA7 /* BasicControlsScreen.swift in Sources */,
+				17C5616C25C2D11F0053CFA7 /* FormLabel.swift in Sources */,
+				17C5618025C2ECB80053CFA7 /* LabeledTextField.swift in Sources */,
 				1785BDF725C2AA7900CEC3EF /* NavigationSidebar.swift in Sources */,
+				17C5619025C2FF2A0053CFA7 /* TextFontScreen.swift in Sources */,
 				17633F7D25C1CEF8003A1ACA /* SwiftUI_ElementsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
