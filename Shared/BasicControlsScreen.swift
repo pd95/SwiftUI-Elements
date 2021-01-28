@@ -17,28 +17,30 @@ struct BasicControlsScreen: View {
     @State private var colorValue = Color.blue
 
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                GroupBox(label: Label("Buttons & styles", systemImage: "square.grid.2x2")) {
-                    buttonStyles
-                }
+        ScrollView(.vertical) {
+            VStack {
+                HStack(alignment: .top) {
+                    GroupBox(label: Label("Buttons & styles", systemImage: "square.grid.2x2")) {
+                        buttonStyles
+                    }
 
-                GroupBox(label: Label("Controls & Pickers", systemImage: "square.grid.2x2")) {
-                    controlViews
-                }
-            }
-            
-            HStack(alignment: .top) {
-                GroupBox(label: Label("Textfields", systemImage: "textbox")) {
-                    textfields
+                    GroupBox(label: Label("Controls & Pickers", systemImage: "square.grid.2x2")) {
+                        controlViews
+                    }
                 }
                 
-                GroupBox(label: Label("Textfield styles", systemImage: "textbox")) {
-                    textfieldStyles
+                HStack(alignment: .top) {
+                    GroupBox(label: Label("Textfields", systemImage: "textbox")) {
+                        textfields
+                    }
+                    
+                    GroupBox(label: Label("Textfield styles", systemImage: "textbox")) {
+                        textfieldStyles
+                    }
                 }
             }
+            .padding()
         }
-        .padding()
     }
     
     var buttonStyles: some View {
@@ -98,6 +100,10 @@ struct BasicControlsScreen: View {
 
                 LabeledControl(title: "Toggle:") {
                     Toggle("Tick the box", isOn: $toggleValue)
+                        .frame(maxWidth: 250)
+                        .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                            dimension[VerticalAlignment.center] + 5
+                        })
                 }
 
                 LabeledControl(title: "Slider:") {
@@ -107,6 +113,9 @@ struct BasicControlsScreen: View {
                         EmptyView()
                     }
                     .frame(maxWidth: 250)
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
                 }
 
                 LabeledControl(title: "Stepper:") {
@@ -114,20 +123,30 @@ struct BasicControlsScreen: View {
                             step: 1) {
                         Text("\(stepperValue)")
                     }
+                    .frame(maxWidth: 250)
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
                 }
                 
                 LabeledControl(title: "Picker:") {
-                    Picker("Screen", selection: $pickerValue) {
+                    Picker("Select screen", selection: $pickerValue) {
                         ForEach(Screen.allCases, id: \.self) { screen in
                             Text(screen.description)
                         }
                     }
                     .frame(maxWidth: 250)
+                    .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] + 5
+                    })
                 }
 
                 LabeledControl(title: "DatePicker:") {
                     DatePicker("Start Date", selection: $dateValue)
                         .frame(maxWidth: 250)
+                        .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
+                            dimension[VerticalAlignment.center] + 5
+                        })
                 }
 
                 LabeledControl(title: "ColorPicker:") {
@@ -135,6 +154,7 @@ struct BasicControlsScreen: View {
                         .alignmentGuide(.firstTextBaseline, computeValue: { dimension in
                             dimension[VerticalAlignment.center] + 5
                         })
+                        .frame(maxWidth: 250)
                 }
             }
         }
