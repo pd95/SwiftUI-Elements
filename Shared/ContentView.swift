@@ -30,6 +30,8 @@ struct ContentView: View {
                 TextFontScreen()
             case .basicControls:
                 BasicControlsScreen()
+            case .navigation:
+                NavigationTestScreen()
             default:
                 PlaceholderView(screen: screen)
             }

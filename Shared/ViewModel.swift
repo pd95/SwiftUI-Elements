@@ -8,7 +8,7 @@
 import Foundation
 
 enum Screen: Hashable, CaseIterable, CustomStringConvertible {
-    case welcome, fontStyles, basicControls, list
+    case welcome, fontStyles, basicControls, navigation, list
     
     var description: String {
         switch self {
@@ -18,6 +18,8 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
             return "Text & Styles"
         case .basicControls:
             return "Controls"
+        case .navigation:
+            return "Navigation"
         case .list:
             return "List"
         }
@@ -31,6 +33,8 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
             return "textformat"
         case .basicControls:
             return "heart.text.square"
+        case .navigation:
+            return "chevron.right.square"
         case .list:
             return "list.bullet.rectangle"
         }
@@ -38,7 +42,7 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
 }
 
 class ViewModel: ObservableObject {
-    @Published var selectedScreen: Screen? = .basicControls
+    @Published var selectedScreen: Screen? = .navigation
 
     func gotoScreen(_ screen: Screen?) {
         #if os(iOS)
