@@ -10,10 +10,11 @@ import SwiftUI
 struct NavigationTestScreen: View {
     
     @State private var selectedStyle = MyNavigationViewStyles.default
-    
+    @State private var selectedScreen: Screen?
+
     var body: some View {
         NavigationView {
-            MainView(selectedStyle: $selectedStyle)
+            MainView(selectedStyle: $selectedStyle, selectedScreen: $selectedScreen)
             ChooseStyleView(selectedStyle: $selectedStyle)
         }
         .myNavigationViewStyle(selectedStyle)
@@ -39,12 +40,17 @@ struct NavigationTestScreen: View {
 
     struct MainView: View {
         @Binding var selectedStyle: MyNavigationViewStyles
+        @Binding var selectedScreen: Screen?
 
         var body: some View {
             VStack {
 
                 ForEach(Screen.allCases, id: \.self) { screen in
-                    NavigationLink(destination: childContent(screen)) {
+                    NavigationLink(
+                        destination: screen.mainView.navigationTitle(screen.description),
+                        tag: screen,
+                        selection: $selectedScreen
+                    ) {
                         Label(screen.description, systemImage: screen.iconName ?? "")
                     }
                 }
@@ -54,20 +60,6 @@ struct NavigationTestScreen: View {
                 Spacer()
             }
             .padding()
-        }
-        
-        func childContent(_ screen: Screen) -> some View {
-            Group {
-                switch screen {
-                case .fontStyles:
-                    TextFontScreen()
-                case .basicControls:
-                    BasicControlsScreen()
-                default:
-                    PlaceholderView(screen: screen)
-                }
-            }
-            .navigationTitle(screen.description)
         }
     }
 }

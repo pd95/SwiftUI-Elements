@@ -24,19 +24,8 @@ struct ContentView: View {
     }
     
     func mainView(for screen: Screen) -> some View {
-        Group {
-            switch screen {
-            case .fontStyles:
-                TextFontScreen()
-            case .basicControls:
-                BasicControlsScreen()
-            case .navigation:
-                NavigationTestScreen()
-            default:
-                PlaceholderView(screen: screen)
-            }
-        }
-        .navigationTitle(screen.description)
+        screen.mainView
+            .navigationTitle(screen.description)
     }
 }
 

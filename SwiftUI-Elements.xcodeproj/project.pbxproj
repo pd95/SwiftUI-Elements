@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170F958C25C95F53004A7CA3 /* TabViewTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F957C25C95CBE004A7CA3 /* TabViewTestScreen.swift */; };
+		170F958F25C95F53004A7CA3 /* TabViewTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F957C25C95CBE004A7CA3 /* TabViewTestScreen.swift */; };
 		17633F7C25C1CEF8003A1ACA /* SwiftUI_ElementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17633F6925C1CEF5003A1ACA /* SwiftUI_ElementsApp.swift */; };
 		17633F7D25C1CEF8003A1ACA /* SwiftUI_ElementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17633F6925C1CEF5003A1ACA /* SwiftUI_ElementsApp.swift */; };
 		17633F7E25C1CEF8003A1ACA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17633F6A25C1CEF5003A1ACA /* ContentView.swift */; };
@@ -38,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170F957C25C95CBE004A7CA3 /* TabViewTestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTestScreen.swift; sourceTree = "<group>"; };
 		17633F6925C1CEF5003A1ACA /* SwiftUI_ElementsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ElementsApp.swift; sourceTree = "<group>"; };
 		17633F6A25C1CEF5003A1ACA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17633F6B25C1CEF8003A1ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 				17C5614125C2AE9A0053CFA7 /* BasicControlsScreen.swift */,
 				17C5618E25C2FF2A0053CFA7 /* TextFontScreen.swift */,
 				179953D925C4567600111EC7 /* NavigationTestScreen.swift */,
+				170F957C25C95CBE004A7CA3 /* TabViewTestScreen.swift */,
 				17C5617B25C2EB480053CFA7 /* Helper */,
 				1785BDFA25C2AA9300CEC3EF /* PlaceholderView.swift */,
 				1785BDF525C2AA7900CEC3EF /* NavigationSidebar.swift */,
@@ -249,6 +253,7 @@
 				1785BDFB25C2AA9300CEC3EF /* PlaceholderView.swift in Sources */,
 				17C5617025C2D1860053CFA7 /* LabeledButton.swift in Sources */,
 				17633F7E25C1CEF8003A1ACA /* ContentView.swift in Sources */,
+				170F958C25C95F53004A7CA3 /* TabViewTestScreen.swift in Sources */,
 				17C5616B25C2D11F0053CFA7 /* FormLabel.swift in Sources */,
 				17C5617F25C2ECB80053CFA7 /* LabeledTextField.swift in Sources */,
 				1785BDF625C2AA7900CEC3EF /* NavigationSidebar.swift in Sources */,
@@ -269,6 +274,7 @@
 				17C5617125C2D1860053CFA7 /* LabeledButton.swift in Sources */,
 				17633F7F25C1CEF8003A1ACA /* ContentView.swift in Sources */,
 				17C5619525C300710053CFA7 /* BasicControlsScreen.swift in Sources */,
+				170F958F25C95F53004A7CA3 /* TabViewTestScreen.swift in Sources */,
 				17C5616C25C2D11F0053CFA7 /* FormLabel.swift in Sources */,
 				17C5618025C2ECB80053CFA7 /* LabeledTextField.swift in Sources */,
 				1785BDF725C2AA7900CEC3EF /* NavigationSidebar.swift in Sources */,

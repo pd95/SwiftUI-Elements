@@ -5,10 +5,10 @@
 //  Created by Philipp on 28.01.21.
 //
 
-import Foundation
+import SwiftUI
 
 enum Screen: Hashable, CaseIterable, CustomStringConvertible {
-    case welcome, fontStyles, basicControls, navigation, list
+    case welcome, fontStyles, basicControls, navigation, tabview, list
     
     var description: String {
         switch self {
@@ -20,6 +20,8 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
             return "Controls"
         case .navigation:
             return "Navigation"
+        case .tabview:
+            return "Tabs"
         case .list:
             return "List"
         }
@@ -35,9 +37,30 @@ enum Screen: Hashable, CaseIterable, CustomStringConvertible {
             return "heart.text.square"
         case .navigation:
             return "chevron.right.square"
+        case .tabview:
+            return "rectangle.stack"
         case .list:
             return "list.bullet.rectangle"
         }
+    }
+
+    @ViewBuilder
+    var mainView: some View {
+        Group {
+            switch self {
+            case .fontStyles:
+                TextFontScreen()
+            case .basicControls:
+                BasicControlsScreen()
+            case .navigation:
+                NavigationTestScreen()
+            case .tabview:
+                TabViewTestScreen()
+            default:
+                PlaceholderView(screen: self)
+            }
+        }
+        .navigationTitle(self.description)
     }
 }
 
