@@ -43,8 +43,7 @@ struct NavigationTestScreen: View {
         @Binding var selectedScreen: Screen?
 
         var body: some View {
-            VStack {
-
+            List {
                 ForEach(Screen.allCases, id: \.self) { screen in
                     NavigationLink(
                         destination: screen.mainView.navigationTitle(screen.description),
@@ -59,7 +58,6 @@ struct NavigationTestScreen: View {
                 ChooseStyleView(selectedStyle: $selectedStyle)
                 Spacer()
             }
-            .padding()
         }
     }
 }
